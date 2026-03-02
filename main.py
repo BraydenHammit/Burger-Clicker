@@ -11,7 +11,7 @@ def click():
   global clicks
   clicks += upgrade
 
-burger = tk.Button(root, image = tk.photoImage('path'), command = click)
-burger.grid(row=0,column=0)
+burger = tk.Button(root, bg = 'gray30', image = tk.PhotoImage('pixelBurger.png'), command = click)
+burger.grid(row=350,column=350)
 
 root.mainloop()
