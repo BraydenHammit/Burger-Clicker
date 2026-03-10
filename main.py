@@ -7,6 +7,8 @@ root = tk.Tk()
 root.geometry('700x700')
 root.title('Burger Clicker')
 
+bImage = tk.PhotoImage('burger.png')
+
 def click():
   global clicks
   global score
@@ -18,7 +20,7 @@ def click():
 score = tk.Label(root, text = clicks)
 score.grid(row=0,column=0)
 
-burger = tk.Button(root, bg = 'gray30', width = 212, height=183, command = lambda: click())
-burger.grid(row=350,column=350)
+burger = tk.Button(root, bg = 'gray30', image = bImage, width = 212, height=183, command = lambda: click())
+burger.grid(row=700,column=700)
 
 root.mainloop()
