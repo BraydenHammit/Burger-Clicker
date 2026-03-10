@@ -9,9 +9,16 @@ root.title('Burger Clicker')
 
 def click():
   global clicks
+  global score
   clicks += upgrade
+  score.grid_forget()
+  score = tk.Label(root, text = clicks)
+  score.grid(row=0,column=0)
 
-burger = tk.Button(root, bg = 'gray30', width = 212, height=183, image = tk.PhotoImage('pixelBurger.png'), command = click())
+score = tk.Label(root, text = clicks)
+score.grid(row=0,column=0)
+
+burger = tk.Button(root, bg = 'gray30', width = 212, height=183, command = lambda: click())
 burger.grid(row=350,column=350)
 
 root.mainloop()
